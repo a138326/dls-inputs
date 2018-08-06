@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Checkout example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Titillium+Web:400,700" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/floating-labels.css" rel="stylesheet">
+    <link href="css/style-floating-open.css" rel="stylesheet">
+    
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content.css">
+</head>
+
+  <body class="">
+
+<!-- Container -->
+	<div class="container float-enclosed">
+
+		<!-- Intro -->
+		<div class="py-5 text-center col-12 offset-lg-2 col-lg-8">
+			<h2>This is a form</h2>
+			<p>Below is an example form demonstrating visual styling, validation and other common patterns. </p>
+		</div>
+		<!-- /Intro -->
+      
+		<!-- Billing -->
+		<div class="col-12 offset-lg-2 col-lg-8" >
+			<h4 class="">Billing address</h4>
+			
+			<!-- Form -->
+			<form class="needs-validation" novalidate="" _lpchecked="1">
+				
+				<!-- Row -->
+				<div class="row">
+
+	            <div class="col-md-6"> 
+		            <div class="form-label-group">
+						<input type="text" id="firstName" class="form-control" placeholder="First name" required autofocus>
+						<label for="firstName">First name</label>
+						<div class="invalid-feedback">Valid first name is required.</div>
+					</div>
+				</div>
+				
+				<div class="col-md-6"> 
+		            <div class="form-label-group">
+						<input type="text" id="lastName" class="form-control" placeholder="Last name" required autofocus>
+						<label for="lastName">Last name</label>
+						<div class="invalid-feedback">Valid last name is required.</div>
+					</div>
+				</div>
+				
+				<div class="col-12"> 
+		            <div class="form-label-group">
+						<input type="email" id="email" class="form-control" placeholder="Email (optional)" required autofocus>
+						<label for="email">Email <span class="float-optional">(optional)</span></label>
+						<div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
+					</div>
+				</div>
+				
+				<div class="col-12"> 
+		            <div class="form-label-group">
+						<input type="text" id="address" class="form-control" placeholder="Address" required autofocus>
+						<label for="address">Address</label>
+						<div class="invalid-feedback">Please enter your shipping address.</div>
+					</div>
+				</div>
+				
+				<div class="col-12"> 
+		            <div class="form-label-group">
+						<input type="text" id="address2" class="form-control" placeholder="Address" required autofocus>
+						<label for="address2">Address 2 <span class="float-optional">(optional)</span></label>
+					</div>
+				</div>
+
+            	</div> 
+            	<!-- /Row -->
+            	
+            	
+            	<!-- Row -->
+            	<div class="row">
+	            	
+				<div class="col-md-5"> 		            
+					<select class="custom-select d-block w-100" id="country" required="">
+						<option selected="true" disabled>Country</option>
+						<option>Australia</option>
+					</select>
+					<label for="country" class="float-select-label">Country</label>
+					<div class="invalid-feedback">Please select a valid country.</div>
+				</div>
+	            
+	            <div class="col-md-4">
+					<select class="custom-select d-block w-100" id="state" required="">
+						<option selected="true" disabled>State</option>
+				  		<option>NSW</option>
+					</select>
+					<label for="state" class="float-select-label">State</label>
+                	<div class="invalid-feedback">Please provide a valid state.</div>
+				</div>
+				
+				<div class="col-md-3"> 
+		            <div class="form-label-group">
+						<input type="number" id="postcode" class="form-control" placeholder="Postcode" required autofocus>
+						<label for="postcode">Postcode</label>
+						<div class="invalid-feedback">Postcode code required.</div>
+					</div>
+				</div>
+				
+				</div>
+				<!-- /Row -->
+				
+				
+				
+				<!-- shipping -->
+				<hr class="mb-3">
+				<div class="custom-control custom-checkbox">
+					<input type="checkbox" class="custom-control-input" id="same-address">
+					<label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+				</div>
+				<div class="custom-control custom-checkbox mb-3">
+					<input type="checkbox" class="custom-control-input" id="save-info">
+					<label class="custom-control-label" for="save-info">Save this information for next time</label>
+				</div>
+				<hr class="mb-3">
+				<!-- /shipping -->
+				
+				
+				<!-- Payments -->
+				<h4 class="mb-3">Payment</h4>
+				
+				<!-- payments options -->
+				<div class="d-block mb-3">
+				
+				<div class="custom-control custom-radio">
+					<input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+					<label class="custom-control-label" for="credit">Credit card</label>
+				</div>
+
+				<div class="custom-control custom-radio">
+					<input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+					<label class="custom-control-label" for="debit">Debit card</label>
+				</div>
+				
+				<div class="custom-control custom-radio">
+                	<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+					<label class="custom-control-label" for="paypal">PayPal</label>
+				</div>
+				
+				</div>
+				<!-- /payments options -->
+            
+            
+			<!-- Row -->
+			<div class="row">
+	
+				<div class="col-md-6"> 
+		            <div class="form-label-group">
+						<input type="text" id="cc-name" class="form-control" placeholder="Name on card" required autofocus>
+						<label for="cc-name">Name on card</label>
+						<div class="invalid-feedback">Name on card is required</div>
+						<small class="text-muted">Full name as displayed on card</small>
+					</div>
+				</div>
+				
+				<div class="col-md-6"> 
+		            <div class="form-label-group">
+						<input type="text" id="cc-number" class="form-control" placeholder="Credit card number" required autofocus>
+						<label for="cc-number">Credit card number</label>
+						<div class="invalid-feedback">Credit card number is required</div>
+					</div>
+				</div>
+
+            </div>
+            <!-- /Row -->
+            
+            
+            <!-- Row -->
+            <div class="row">
+	            
+	            <div class="col-md-3"> 
+		            <div class="form-label-group">
+			            <input type="text" id="cc-expiration" class="form-control" placeholder="Expiration" required autofocus>
+						<label for="cc-expiration">Expiration</label>
+						<div class="invalid-feedback">Expiration date required</div>
+					</div>
+				</div>
+	            
+	            <div class="col-md-3"> 
+		            <div class="form-label-group">
+						<input type="number" id="cc-cvv" class="form-control" placeholder="CVV" required autofocus>
+						<label for="cc-cvv">CVV</label>
+						<div class="invalid-feedback">Security code required</div>
+					</div>
+				</div>
+              
+            </div>
+            <!-- Row -->
+            
+            <hr class="mb-3">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+
+
+				
+            	
+			</form>
+			<!-- /Form -->
+		
+		</div>
+	  <!-- / Billing -->
+
+	  </div>
+<!-- /Container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  
+
+
+
+</body>
+
+</html>
